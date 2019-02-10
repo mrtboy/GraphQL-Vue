@@ -34,11 +34,12 @@ export default {
           }
         }
       `,
-      result({data, loading, networkStatus}) {
-        if(!loading) {
-          this.posts = data.getPosts;
-          console.log(networkStatus)
-        }
+      result(args) {
+        console.log(args);
+      },
+      error(err) {
+        console.error('[Error!]', err);
+        console.dir(err);
       }
     }
   }
